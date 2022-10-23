@@ -57,7 +57,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button primary">Замовити послугу</button>
+          <button type="button" class="button primary" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <section class="benefits-section section">
@@ -121,6 +121,9 @@
                 alt="Чиїсь руки друкують текст на планшеті"
                 width="370"
               />
+              <div class="services-description">
+                <p class="services-text">Десктопні додатки</p>
+              </div>
             </li>
             <li class="list-item">
               <img
@@ -128,6 +131,9 @@
                 alt="Спеціаліст тримає в руках телефон одночасно працюючи за ноутбуком"
                 width="370"
               />
+              <div class="services-description">
+                <p class="services-text">Мобільні додатки</p>
+              </div>
             </li>
             <li class="list-item">
               <img
@@ -135,6 +141,9 @@
                 alt="Чиїсь руки малюють малюнок на планшеті"
                 width="370"
               />
+              <div class="services-description">
+                <p class="services-text">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -417,5 +426,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-modal-button" data-modal-close>
+          <svg width="18" height="18">
+            <use class="close-modal-icon" href="./images/icons.svg#icon-close-modal-button"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./modal.js"></script>
   </body>
 </html>

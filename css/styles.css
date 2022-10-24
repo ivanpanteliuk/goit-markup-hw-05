@@ -12,6 +12,7 @@
   --overlay-color: rgba(47, 48, 58, 0.4);
   --our-team-social-background: #333;
   --footer-social-background-icon-color: #afb1b8;
+  --footer-contact-color: rgba(255, 255, 255, 0.6);
 
   /* Animation functions  */
 
@@ -157,7 +158,7 @@ img {
   content: '';
 
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 
   width: 100%;
@@ -171,7 +172,7 @@ img {
   content: '';
 
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 
   width: 100%;
@@ -184,7 +185,8 @@ img {
   transition: transform var(--transition-duration) var(--transition-timing-function);
 }
 
-.site-nav .link:hover::before {
+.site-nav .link:hover::before,
+.site-nav .link:focus::before {
   transform: scaleX(100%);
 }
 
@@ -202,8 +204,6 @@ img {
 .contact-link {
   display: flex;
   align-items: center;
-
-  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .contact-link:hover,
@@ -566,7 +566,7 @@ img {
 }
 
 .contact-link {
-  color: var(--contact-info-color);
+  color: var(--footer-contact-color);
   line-height: 1.71;
 }
 
@@ -578,10 +578,6 @@ img {
 
 .address .list-item:not(:last-child) {
   margin-bottom: 9px;
-}
-
-.address .link {
-  display: block;
 }
 
 .footer .container {
@@ -660,7 +656,8 @@ img {
   transition: transform var(--transition-duration) var(--transition-timing-function);
 }
 
-.portfolio-card:hover .overlay-text {
+.portfolio-card:hover .overlay-text,
+.portfolio-card:focus .overlay-text {
   transform: translateY(0);
 }
 
@@ -699,14 +696,14 @@ img {
 
   transform: scale(1);
 
-  transition: visibility var(--transition-duration) var(--transition-timing-function),
-    opacity var(--transition-duration) var(--transition-timing-function);
+  transition: transform var(--transition-duration) var(--transition-timing-function);
 }
 
 .backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  transform: scale(0);
 }
 
 .modal {
@@ -740,3 +737,6 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--primary-white-color);
 }
+/* 
+visibility var(--transition-duration) var(--transition-timing-function),
+    opacity var(--transition-duration) var(--transition-timing-function); */

@@ -168,7 +168,7 @@ img {
   border-radius: 2px;
 }
 
-.site-nav .link::before {
+.site-nav .link:not(.current)::before {
   content: '';
 
   position: absolute;
@@ -185,8 +185,8 @@ img {
   transition: transform var(--transition-duration) var(--transition-timing-function);
 }
 
-.site-nav .link:hover::before,
-.site-nav .link:focus::before {
+.site-nav .link:not(.current):hover::before,
+.site-nav .link:not(.current):focus::before {
   transform: scaleX(100%);
 }
 

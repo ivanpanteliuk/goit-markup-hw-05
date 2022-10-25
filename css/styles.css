@@ -696,7 +696,9 @@ img {
 
   transform: scale(1);
 
-  transition: transform var(--transition-duration) var(--transition-timing-function);
+  transition: transform var(--transition-duration) var(--transition-timing-function),
+    visibility var(--transition-duration) var(--transition-timing-function),
+    opacity var(--transition-duration) var(--transition-timing-function);
 }
 
 .backdrop.is-hidden {
@@ -737,6 +739,3 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--primary-white-color);
 }
-/* 
-visibility var(--transition-duration) var(--transition-timing-function),
-    opacity var(--transition-duration) var(--transition-timing-function); */
